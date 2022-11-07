@@ -361,6 +361,7 @@ jobs:
           sudo find system/system/priv-app -type f -exec chmod 0644 {} \;
           sudo find system/system/priv-app -exec chcon --reference=system/system/priv-app {} \;
       - name: Integrate GApps
+        continue-on-error: true
         if: ${{ github.event.inputs.gapps_variant != 'none' && github.event.inputs.gapps_variant != '' }}
         run: |
           wget -qO- "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/archive/$GITHUB_REF.tar.gz" | sudo tar --wildcards -zxvf- --strip-component=2 '*/${{ matrix.arch }}/gapps/*'
