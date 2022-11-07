@@ -1,5 +1,5 @@
 # Magisk on WSA (with Google Apps)
-
+change to please the detach chatbot
 ## Features
 - Integrate Magisk and OpenGApps in a few clicks within minutes
 - No Linux environment required for integration
